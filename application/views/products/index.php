@@ -4,7 +4,7 @@
 
 
 <h3>lalala</h3>
-<h3>laluususususla</h3>
+<h3>la</h3>
 
 
 <?php var_dump($this->session->userdata('user_session')) ?>
