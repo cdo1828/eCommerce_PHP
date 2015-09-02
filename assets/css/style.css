@@ -1,6 +1,41 @@
 *{
-	margin-top: 15px;
+	margin-top: 0px;
 }
 #price{
 	width: 200px;
+}
+
+.allquotes{
+	/*margin-top: 20px;*/
+		width: auto;
+		height: 600px;
+		overflow: auto;
+		padding: 5px 30px;
+		font-size: 18px;
+}
+
+.favquotes{
+	/*margin-top: 20px;*/
+		width: auto;
+		height: 300px;
+		overflow: auto;
+		padding: 5px 30px;
+		font-size: 18px;
+}
+.navbar .navbar-brand{
+	font-size: 35px;
+}
+.navbar .navbar-right{
+	font-size: 16px;
+	margin-right: 20px;
+}
+
+.jumbotron{
+	height: 350px;
+	padding: 15px;
+}
+
+.well{
+	opacity: 0.9; /* opacity [0-1] */
+    background: rgba(0, 0, 255, 0.9);
 }

@@ -4,22 +4,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-if(ENVIRONMENT == 'production')
-{
-	$db['default']['hostname'] = 'localhost';
-	$db['default']['username'] = 'root';
-	$db['default']['password'] = '';
-	$db['default']['database'] = '';
-}
-else
-{
-	$db['default']['hostname'] = 'localhost';
-	$db['default']['username'] = 'root';
-	$db['default']['password'] = 'root';
-	$db['default']['database'] = '';
-}
+// if(ENVIRONMENT == 'production')
+// {
+// 	$db['default']['hostname'] = 'localhost';
+// 	$db['default']['username'] = 'root';
+// 	$db['default']['password'] = 'root';
+// 	$db['default']['database'] = 'ecommers_one';
+// }
+// else
+// {
+// 	$db['default']['hostname'] = 'localhost';
+// 	$db['default']['username'] = 'root';
+// 	$db['default']['password'] = 'root';
+// 	$db['default']['database'] = 'ecommers_one';
+// }
 
 $db['default'] = array(
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => 'root',
+	'database' => 'ecommers_one',
 	'dsn'	=> '',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

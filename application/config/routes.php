@@ -1,12 +1,32 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$route['default_controller'] = 'myassets';
 // $route['default_controller'] = 'application';
+$route['default_controller'] = 'products/index';
 
+//user_authontication
+$route['login'] = 'users/login_page';
+$route['registration'] = 'users/register_page';
+
+//Products
+$route['products'] = 'products/index';
+$route['products/create'] = 'products/add_page';
+$route['products/show/(:any)'] = 'products/show/$1';
+$route['products/edit/(:any)'] = 'products/edit/$1';
+
+//Cart
+$route['cart'] = 'carts/cart';
+
+
+//Categories
+$route['categories'] = 'categories/index';
+$route['categories/edit(:any)'] = 'categories/edit/$1';
+
+
+
+//
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-
 
 /*
 | -------------------------------------------------------------------------
