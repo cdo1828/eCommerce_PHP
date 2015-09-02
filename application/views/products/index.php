@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 w<!DOCTYPE html>
 <html>
   <head>
@@ -16,7 +17,11 @@ w<!DOCTYPE html>
   <?php var_dump($products) ?>
   <?php var_dump($this->session->userdata('cart_items')) ?>
 
-<?php $this->load->view('/partials/navbar') ?>
+=======
+<?php var_dump($this->session->userdata('user_session')) ?>
+<?php $this->load->view('/templates/header') ?>
+<?php $this->load->view('/templates/navbar') ?>
+>>>>>>> 08d6d1fb035ba2f3ad044008d1517f059893f58c
 
 
 	<h1>Products index</h1>
@@ -35,13 +40,21 @@ w<!DOCTYPE html>
     foreach ($products as $product) {
    ?>
   <tr>
+    <td><a href="products/show/<?= $product['id']?>"><?= $product['title'] ?></a></td>
     <td><?= $product['title'] ?></td>
     <td><?= $product['description'] ?></td>
     <td>$ <?= $product['price'] ?></td>
-    <td>    
-      <a href="products/show/<?= $product['id']?>"><button class='btn btn-primary'>show</button></a>
-      <a href="products/edit/<?= $product['id']?>"><button class='btn btn-info'>edit</button></a>
-      <a href="products/destroy/<?= $product['id']?>"><button class='btn btn-danger'>destroy</button></a>
+    <td>
+      <!-- Products Action Dropdown button -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Action <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="products/edit/<?= $product['id']?>"><button class='btn btn-info'>edit</button></a></li>
+        <li><a href="products/destroy/<?= $product['id']?>"><button class='btn btn-danger'>destroy</button></a></li>  
+      </ul>
+    </div>
     </td>
     <td><a href="/carts/add/<?= $product['id']?>"><button class='btn btn-warning'>Add to Cart</button></a></td>
   </tr>
@@ -51,5 +64,5 @@ w<!DOCTYPE html>
   <a href="/products/create"><button class='pull-left btn btn-primary'> Add a new Product</button></a>
 </div>
 
-</body>
-</html>
+<!-- Footer -->
+<?php $this->load->view('/templates/footer') ?>

@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" context="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="">
-    <link rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>">
-    <title>Title Here</title>
-
-    <link href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/css/font-awesome.min.css') ?>" rel="stylesheet">
-</head>
-<body>
+<?php $this->load->view('/templates/header') ?>
 
 	<div class="row">
-		<div class="col-md-4 col-md-offset-4">
+		<div class="col-md-6 col-md-offset-3">
 			<h3>Log in</h3>
 
 			<form action='/users/login' method='post'>
@@ -31,5 +18,4 @@
 		</div>
 	</div>
 
-</body>
-</html>
+<?php $this->load->view('/templates/footer') ?>
