@@ -3,17 +3,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Carts extends CI_Controller {
 
-	public function cart(){
-		if (empty($cart_items)) {
+	public function index(){
+
+	if (empty($cart_items)) {
+
 			$this->load->view('carts/cart');	
+
+		} else {
+
+			$this->load->view('/carts/cart', $data);
 		}
+
+	}
+
+	public function cart(){
+		
 		
 	}
 
 	public function add($id){
-		$items['id'] = $id;
-		$this->session->set_userdata('cart_items', $items );
-
+		
+		if($this->session->userdata('cart_items') == null){
+			$all_items = array($id);
+			
+		} else {
+			$all_items = $this->session->userdata('cart_items');
+			array_push($all_items, $id);
+		}
+		
+		$this->session->set_userdata('cart_items', $all_items);
+		
 		redirect('products');
 	}
 

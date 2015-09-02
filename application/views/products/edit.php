@@ -26,8 +26,6 @@
   foreach ($products as $product) {
  ?>
 
-<?= var_dump($products)?>
-
   <form action='/products/update' method='post'>
     <div class="form-group">
         <input type='hidden' name='id' value='<?= $product['id'] ?>'>
@@ -35,7 +33,7 @@
         <input class='form-control' type='text' name='title' value='<?= $product['title']?>' placeholder='Name of product'>
     </div>
     <div class="form-group">
-        <label> Description</label>
+        <label> Description: </label>
         <textarea class='form-control' rows='5' name='description' placeholder='Description...'><?= $product['description']?></textarea>
     </div>
     <div class="form-group">
@@ -43,7 +41,7 @@
         <input class='form-control' type='text' name='price' value='<?= $product['price']?>' placeholder='Price...'>
     </div>
     <div class="form-group">
-        <label>Categories</label>
+        <label>Categories: </label>
         <select multiple class='form-control' name='category_id'>
               <? foreach ($categories as $category) { ?>
                 <option value='<?= $category['id']?>'><?= $category['name']?></option>

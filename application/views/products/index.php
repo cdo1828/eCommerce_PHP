@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+w<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -14,6 +14,8 @@
 <body>
 	<?php var_dump($this->session->userdata('user_session')) ?>
   <?php var_dump($products) ?>
+  <?php var_dump($this->session->userdata('cart_items')) ?>
+
 <?php $this->load->view('/partials/navbar') ?>
 
 
