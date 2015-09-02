@@ -11,6 +11,7 @@ class Carts extends CI_Controller {
 
 		} else {
 
+			
 			$this->load->view('/carts/cart', $data);
 		}
 
