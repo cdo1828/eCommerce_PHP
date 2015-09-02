@@ -5,17 +5,9 @@ class cart extends CI_Model {
 
 	function populate_cart($id){
 
-		$query = "SELECT * FROM products
-				WHERE id = {$id}"
+		$query = "SELECT * FROM products WHERE id in (?)";
+		$values = $id;
+		return $this->db->query($query,$values);
 	
 	}
-	
-	function remove_from_cart(){
-		
-	}
-
-	function update_cart(){
-
-	}
-
 }

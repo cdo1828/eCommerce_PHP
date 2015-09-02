@@ -7,19 +7,16 @@ class Carts extends CI_Controller {
 
 	if (empty($cart_items)) {
 
-			$this->load->view('carts/cart');	
+			$this->load->view('carts/index');	
 
 		} else {
-
-			$this->load->view('/carts/cart', $data);
+			$data['cart_items'] = $this->session->userdata('cart_items');
+			$cart_products = $this->cart->populate_cart($this->data['cart_items']);
+			$this->session->set_userdata('cart_products', $cart_products);
+			$this->load->view('carts/index', $data);
 		}
-
 	}
 
-	public function cart(){
-		
-		
-	}
 
 	public function add($id){
 		
@@ -33,6 +30,8 @@ class Carts extends CI_Controller {
 		
 		$this->session->set_userdata('cart_items', $all_items);
 		
+
+
 		redirect('products');
 	}
 

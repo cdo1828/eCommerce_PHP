@@ -23,7 +23,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/categories">categories</a></li>
         <li><a href="/products">Products</a></li>
-        <li><a href="/cart">Cart</a></li>
+        <li><a href="/carts">Cart</a></li>
         <!-- User/ Loggin  -->
           <? if(empty($this->session->userdata['user_session']['is_logged_in'])) {?>
               <li><a href="/login" data-toggle="modal" data-target=".bs-example-modal-lg">Log in</a></li>
