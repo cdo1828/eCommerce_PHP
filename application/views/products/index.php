@@ -1,12 +1,3 @@
-
-<h1>HERE i added new bok bok !!!</h1>
-<h2>sher sher Updating that shar shar</h2>
-
-
-<h3>lalala</h3>
-<h3>la</h3>
-
-
 <?php var_dump($this->session->userdata('user_session')) ?>
 <?php $this->load->view('/templates/header') ?>
 <?php $this->load->view('/templates/navbar') ?>
