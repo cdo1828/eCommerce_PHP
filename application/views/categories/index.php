@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" context="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="">
-    <link rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>">
-    <title>Index | Categories</title>
+<?php var_dump($this->session->userdata('user_session')) ?>
+<?php $this->load->view('/templates/header') ?>
+<?php $this->load->view('/templates/navbar') ?>
 
-    <link href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/css/font-awesome.min.css') ?>" rel="stylesheet">
-
-
-</head>
-<body>
-	<?php var_dump($categories) ?>
 	<div class="container">
 		<h1>Categories</h1>
 		<form action='/categories/add' method='post'>
@@ -47,16 +34,10 @@
 			</tr>
 				<? } ?> <!-- End -->
 		</table>
-
-		<!-- Show DropDown Category -->
-		<!-- <select multiple class="form-control">
-			<? foreach ($categories as $category) { ?>
-				<option value="<?= $category['name'] ?>"><?= $category['name'] ?></option>
-			<? } ?>
-		</select> -->
 	</div>
     <script src="<?php echo base_url('assets/js/jquery-2.1.4.min.js') ?>"></script>
   	<script src="<?php echo base_url('assets/js/lodash.min.js') ?>"></script>
   	<script src="<?php echo base_url('assets/js/bootstrap.min.js') ?>"></script>
-</body>
-</html>
+
+<!-- Footer -->
+<?php $this->load->view('/templates/footer') ?>
