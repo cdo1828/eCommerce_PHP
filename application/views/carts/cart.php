@@ -3,6 +3,8 @@
 	<?php var_dump($this->session->userdata['cart_items']) ?>
 	<? $cart_items = $this->session->userdata['cart_items'] ?>
 	
+
+
 	<div class="container">
 		<h1>Cart</h1>
 

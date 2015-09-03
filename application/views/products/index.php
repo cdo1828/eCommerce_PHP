@@ -1,8 +1,4 @@
-<?php var_dump($this->session->userdata('user_session')) ?>
 <?php $this->load->view('/templates/header') ?>
-
-
-
 
 	<h1>Products index</h1>
 <div class="container">
@@ -36,7 +32,7 @@
       </ul>
     </div>
     </td>
-    <td><a href="/carts/add/<?= $product['id']?>"><button class='btn btn-warning'>Add to Cart</button></a></td>
+    <td><a href="/carts/add/<?= $product['id'] ?>"><button class='btn btn-warning'>Add to Cart</button></a></td>
   </tr>
   <?php } ?>
 </table>

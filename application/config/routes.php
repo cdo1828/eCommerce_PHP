@@ -16,6 +16,7 @@ $route['products/edit/(:any)'] = 'products/edit/$1';
 
 //Cart
 $route['cart'] = 'carts/cart';
+$route['cart/add/(:any)'] = 'carts/add/$1';
 
 //Categories
 $route['categories'] = 'categories/index';
