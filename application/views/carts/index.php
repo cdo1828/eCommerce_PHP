@@ -29,7 +29,7 @@ foreach($cart_items as $item){
 		<td><?= $item['title']?></td>
 		<td><?= $item['description']?></td>
 		<td><?= $item['price']?></td>
-		<td><input type = 'number' min = '1' max = '20' name = '<?= $item['id'] ?>_quantity' style = 'width: 45px;' value = '1'></td>
+		<td><input type = 'number' min = '1' max = '20' name = '<?= $item['id'] ?>' style = 'width: 45px;' value = '1'></td>
 		<td><a href="/carts/destroy/<?= $item['id'] ?>"><button type = 'button' class='btn btn-danger'>Remove Item from cart</button></a></td>
 	</tr>
 <?php

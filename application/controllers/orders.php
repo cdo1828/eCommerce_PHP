@@ -5,17 +5,17 @@ class orders extends CI_Controller {
 
 	public function checkout(){
 		$this->load->model('order');
+		$user_id = $this->session->userdata('user_session')['user_id'];
 		$info = $this->input->post();
 
-		// var_dump($info);
 		foreach($info as $key=>$value){
 
-			$this->order->log_order(explode('_', $key), $value);
-			// var_dump($key);
-			// var_dump($value);
-			// var_dump(explode('_', $key));
+			$this->order->log_order($key, $user_id, $value);
+			
 		}
 
-		}
+		
+
+	}
 
 }
