@@ -1,14 +1,6 @@
-
-<h1>HERE i added new bok bok !!!</h1>
-<h2>sher sher Updating that shar shar</h2>
-
-
-<h3>lalala</h3>
-
-
 <?php var_dump($this->session->userdata('user_session')) ?>
 <?php $this->load->view('/templates/header') ?>
-<?php $this->load->view('/templates/navbar') ?>
+
 
 
 
@@ -48,6 +40,19 @@
   </tr>
   <?php } ?>
 </table>
+
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="..." alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+</div>
 
   <a href="/products/create"><button class='pull-left btn btn-primary'> Add a new Product</button></a>
 </div>

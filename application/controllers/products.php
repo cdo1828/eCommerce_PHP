@@ -27,7 +27,11 @@ class Products extends CI_Controller {
 	// Add Product
 	public function add(){
 		if ($this->form_validation->run() === TRUE){
-			$this->product->create($this->input->post());
+			// Images
+			$url = $this->do_upload();
+			$this->product->create($this->input->post(), $url);
+			// $this->product->create($url);
+
 			redirect('/products');
 		}else{
 			$this->session->set_flashdata('errors', validation_errors());
@@ -63,6 +67,18 @@ class Products extends CI_Controller {
 	public function destroy($id){
 		$this->product->destroy($id);
 		redirect('products');		
+	}
+
+	// Image Uploader Do !!!
+	private function do_upload(){
+		$type = explode('.', $_FILES["pic"]["name"]);
+		$type = strtolower($type[count($type)-1]);
+		$url = "./assets/images/product_images/".uniqid(rand()).'.'.$type;
+		if(in_array($type, array("jpg", "jpeg", "gif", "png")))
+			if(is_uploaded_file($_FILES["pic"]["tmp_name"]))
+				if(move_uploaded_file($_FILES["pic"]["tmp_name"],$url))
+					return $url;
+		return "";
 	}
 
 

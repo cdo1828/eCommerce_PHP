@@ -9,10 +9,11 @@ class Product extends CI_Model {
 		return $this->db->query($query)->result_array();
 	}
 
+
 	// Create Product
-	function create($post){
-		$query = "INSERT INTO products(title, description, price, user_id, category_id, created_at, updated_at) VALUES(?,?,?,?,?, NOW(), NOW())";
-		$values = array($post['title'], $post['description'], $post['price'], $post['user_id'], $post['category_id']);
+	function create($post, $url){
+		$query = "INSERT INTO products(title, description, price, user_id, category_id, image_url, created_at, updated_at) VALUES(?,?,?,?,?,?, NOW(), NOW())";
+		$values = array($post['title'], $post['description'], $post['price'], $post['user_id'], $post['category_id'], $url);
 		$this->db->query($query, $values);
 	}
 

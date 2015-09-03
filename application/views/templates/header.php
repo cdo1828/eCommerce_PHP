@@ -12,3 +12,4 @@
     <link href="<?php echo base_url('assets/css/font-awesome.min.css') ?>" rel="stylesheet">
 </head>
 <body>
+<?php $this->load->view('/templates/navbar') ?>

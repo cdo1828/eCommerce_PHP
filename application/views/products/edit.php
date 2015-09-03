@@ -1,6 +1,6 @@
 <?php var_dump($this->session->userdata('user_session')) ?>
 <?php $this->load->view('/templates/header') ?>
-<?php $this->load->view('/templates/navbar') ?>
+
 
 <div class="container">
   <a class='btn btn-link' href="/products"> back</a>

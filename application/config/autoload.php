@@ -92,7 +92,7 @@ $autoload['drivers'] = array();
 
 // $autoload['helper'] = array();
 	// Changed By Rovshen: defualt empty array();
-$autoload['helper'] = array('url');
+$autoload['helper'] = array('url', 'form', 'file');
 
 
 /*

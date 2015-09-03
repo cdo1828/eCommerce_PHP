@@ -12,7 +12,7 @@
         <span class="icon-bar"></span>
       </button>
       <ul class="nav navbar-nav">
-        <li><a class="navbar-brand fa fa-spinner " href="/">nline Store</a></li></li>
+        <li><a class="navbar-brand fa fa-spinner" href="/">nline Store</a></li></li>
       </ul>        
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->

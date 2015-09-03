@@ -1,6 +1,6 @@
 <?php var_dump($this->session->userdata('user_session')) ?>
 <?php $this->load->view('/templates/header') ?>
-<?php $this->load->view('/templates/navbar') ?>
+
 
 	<div class="container">
 		<h1>Categories</h1>

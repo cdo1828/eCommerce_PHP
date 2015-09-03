@@ -17,11 +17,12 @@ $route['products/edit/(:any)'] = 'products/edit/$1';
 //Cart
 $route['cart'] = 'carts/cart';
 
-
 //Categories
 $route['categories'] = 'categories/index';
 $route['categories/edit(:any)'] = 'categories/edit/$1';
 
+// Upload
+$route['gallery'] = 'galleries/gallery';
 
 
 //

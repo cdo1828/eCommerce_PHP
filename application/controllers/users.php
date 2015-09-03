@@ -28,7 +28,7 @@ class Users extends CI_Controller {
 			redirect('/');
 		}else{
 			$this->session->set_flashdata('error', 'Invalid Email or Password!');
-			redirect('/users/login');
+			redirect('login');
 		}
 	}
 
