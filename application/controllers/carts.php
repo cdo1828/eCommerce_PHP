@@ -5,14 +5,13 @@ class Carts extends CI_Controller {
 
 	public function index(){
 
-	if (empty($cart_items)) {
+	if (empty($this->session->userdata('cart_items'))) {
 
 			$this->load->view('carts/index');	
+		} 
+		else {
 
-		} else {
 			$data['cart_items'] = $this->session->userdata('cart_items');
-			$cart_products = $this->cart->populate_cart($this->data['cart_items']);
-			$this->session->set_userdata('cart_products', $cart_products);
 			$this->load->view('carts/index', $data);
 		}
 	}

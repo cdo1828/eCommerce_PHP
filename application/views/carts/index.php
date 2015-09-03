@@ -3,8 +3,6 @@
 <?php $this->load->view('/templates/navbar') ?>
 	<?php var_dump($this->session->userdata['cart_items']) ?>
 	<?php $cart_items = $this->session->userdata['cart_items']?>
-	<?php var_dump($cart_items['0']) ?>
-	<? $cart_items = $this->session->userdata['cart_items'] ?>
 	
 	<div class="container">
 		<h1>Cart</h1>		
