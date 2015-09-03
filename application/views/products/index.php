@@ -1,4 +1,6 @@
-<?php var_dump($this->session->userdata('user_session')) ?>
+<?php //var_dump($this->session->userdata('user_session')); 
+      //var_dump($this->session->userdata('cart_items'))
+?>
 <?php $this->load->view('/templates/header') ?>
 <?php $this->load->view('/templates/navbar') ?>
 
@@ -36,7 +38,7 @@
       </ul>
     </div>
     </td>
-    <td><a href="/carts/add/<?= $product['id']?>"><button class='btn btn-warning'>Add to Cart</button></a></td>
+    <td><a href="/carts/add/<?= $product['id'] ?>"><button class='btn btn-warning'>Add to Cart</button></a></td>
   </tr>
   <?php } ?>
 </table>
